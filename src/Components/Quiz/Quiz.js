@@ -59,6 +59,8 @@ function Quiz() {
       }
 
       setArray(x);
+
+      // console.log("ans array is: ", x);
     }
   };
 
@@ -87,6 +89,7 @@ function Quiz() {
           setScore={setScore}
           setActiveOption={setActiveOption}
           setSelect={setSelect}
+          setArray={setArray}
         />
       ) : (
         <div className="QuizDiv">

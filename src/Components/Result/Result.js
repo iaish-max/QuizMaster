@@ -33,6 +33,7 @@ function MyVerticallyCenteredModal(props) {
             props.setresult(false);
             props.setquesno(0);
             props.setselect("");
+            props.setArray([]);
           }}
         >
           Play Again
@@ -54,6 +55,7 @@ function Result({
   setScore,
   setActiveOption,
   setSelect,
+  setArray,
 }) {
   const [modalShow, setModalShow] = React.useState(true);
 
@@ -69,6 +71,7 @@ function Result({
         setscore={setScore}
         setactiveoption={setActiveOption}
         setselect={setSelect}
+        setArray={setArray}
       />
     </>
   );
