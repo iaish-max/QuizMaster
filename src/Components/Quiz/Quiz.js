@@ -41,9 +41,11 @@ function Quiz() {
     makeArray();
   }, [quesNo, categoryQuestions]);
 
+  let x = [];
+
   const makeArray = () => {
     if (categoryQuestions.length !== 0) {
-      const x = [
+      x = [
         categoryQuestions[quesNo].correctAnswer,
         ...categoryQuestions[quesNo].incorrectAnswer,
       ];
@@ -60,7 +62,7 @@ function Quiz() {
 
       setArray(x);
 
-      // console.log("ans array is: ", x);
+      console.log("ans array is: ", x);
     }
   };
 

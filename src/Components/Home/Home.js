@@ -177,7 +177,7 @@ function MyVerticallyCenteredModal(props) {
   const responseGoogle = async function (response) {
     try {
       const email = response.profileObj.email;
-      // console.log("response: ", email);
+      console.log("response: ", email);
       googleSignUp(email);
       googleLogin(email);
     } catch (err) {
