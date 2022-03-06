@@ -32,7 +32,7 @@ function MyVerticallyCenteredModal(props) {
   const navigate = useNavigate();
 
   const changeHandlerLoginCP = (e) => {
-    console.log("confirm Password is: ", confirmPassword);
+    // console.log("confirm Password is: ", confirmPassword);
     setConfirmPassword(e.target.value);
   };
 
@@ -139,7 +139,7 @@ function MyVerticallyCenteredModal(props) {
 
       console.log(result);
     } catch (err) {
-      console.log("facebook err is: ", err);
+      console.log("google err is: ", err);
     }
   };
 
@@ -177,11 +177,11 @@ function MyVerticallyCenteredModal(props) {
   const responseGoogle = async function (response) {
     try {
       const email = response.profileObj.email;
-      console.log("response: ", email);
+      // console.log("response: ", response);
       googleSignUp(email);
       googleLogin(email);
     } catch (err) {
-      console.log(err);
+      console.log("google error is: ", err);
     }
   };
 
@@ -320,6 +320,8 @@ function Home({
     Cookies.remove("refreshToken");
   };
 
+  // console.log("userLoggedIn: ", userLoggedIn);
+
   return (
     <div>
       {Category.length === 0 ? (
@@ -372,7 +374,9 @@ function Home({
                     <li className="listitem">Home</li>
                   </div>
                   <div
-                    className="listitemDiv"
+                    className={
+                      !userLoggedIn ? "listitemDiv" : "listitemDiv inactive"
+                    }
                     onClick={() => {
                       setBurgerMenu(!burgerMenu);
                       setModalShow(true);

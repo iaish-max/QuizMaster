@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import book from "../../Images/books.svg";
 import Anime from "../../Images/movie.svg";
 import "../Category/Category.css";
