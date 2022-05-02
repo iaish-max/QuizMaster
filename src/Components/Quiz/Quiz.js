@@ -23,7 +23,9 @@ function Quiz() {
     try {
       const headers = { authorization: Cookies.get("token") }; // for cookie
       const axiosConfig = { withCredentials: true }; // for cookie
-      const res = await axios.get(API, { headers, axiosConfig }); // for cookie
+      // const res = await axios.get(API, { headers, axiosConfig }); // for cookie
+
+      const res = await axios.get(API); // for without cookie
 
       setCategoryQuestions(res.data.questions);
       // console.log("questions is: ", res.data.questions);
