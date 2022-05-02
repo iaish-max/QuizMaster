@@ -50,9 +50,10 @@ function AddQuestion() {
         axiosConfig: { withCredentials: true },
       };
 
-      // console.log("categoryId response is: ", response.data);
+      console.log("categoryId response is: ", response.data);
+      console.log("question details is: ", questionAdd);
 
-      axios.post(
+      const addQues = axios.post(
         `${process.env.REACT_APP_BACKEND_SERVER}/quizMaster/question/${response.data._id}`,
         {
           statement: questionAdd.statement,
@@ -61,6 +62,8 @@ function AddQuestion() {
         },
         options
       );
+
+      console.log("addQues is: ", addQues);
     } catch (err) {
       console.log(err);
     }

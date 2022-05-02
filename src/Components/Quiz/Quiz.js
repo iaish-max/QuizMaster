@@ -21,8 +21,8 @@ function Quiz() {
 
   const fetchCategoryQuestions = async () => {
     try {
-      const headers = { authorization: Cookies.get("token") }; // for cookie
-      const axiosConfig = { withCredentials: true }; // for cookie
+      // const headers = { authorization: Cookies.get("token") }; // for cookie
+      // const axiosConfig = { withCredentials: true }; // for cookie
       // const res = await axios.get(API, { headers, axiosConfig }); // for cookie
 
       const res = await axios.get(API); // for without cookie
