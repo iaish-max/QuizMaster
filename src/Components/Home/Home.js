@@ -59,7 +59,9 @@ function MyVerticallyCenteredModal(props) {
     // POST request using fetch with error handling
     const requestOptions = {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(props.loginDetails),
     };
 
@@ -329,7 +331,7 @@ function Home({
           <img src={spinner} alt="" />
         </div>
       ) : (
-        <div>
+        <div className="wholeDiv">
           {/* login html */}
 
           <MyVerticallyCenteredModal
