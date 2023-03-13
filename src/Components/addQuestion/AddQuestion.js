@@ -193,7 +193,7 @@ function AddQuestion() {
           </div>
           <div className="buttonDiv">
             <Button className="buttonQues" type="submit">
-              submit
+              Submit
             </Button>
           </div>
         </form>
